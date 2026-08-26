@@ -5,47 +5,118 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Prof. Sanghee Kang | Colorectal Surgeon</title>
   <meta name="description" content="Homepage of Prof. Sanghee Kang, Department of Surgery (Colorectal), Korea University College of Medicine." />
-  <meta property="og:title" content="Prof. Sanghee Kang" />
+  <meta property="og:title" content="Prof. Sanghee Kang, M.D., Ph.D." />
   <meta property="og:description" content="Colorectal surgeon & professor at Korea University. Research in cancer genomics, clinical AI, organoids & MPS." />
+  <meta property="og:image" content="assets/profile.jpg" />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#7a0019" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%237a0019'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23fff' text-anchor='middle'%3ESK%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --crimson:#7a0019; /* Korea University crimson-ish */
-      --ink:#1f2937;--muted:#6b7280;--bg:#ffffff;--card:#f7f7f8;--ring:#e5e7eb
+      --crimson:#7a0019;
+      --crimson-soft:rgba(122,0,25,.08);
+      --crimson-soft2:rgba(122,0,25,.14);
+      --ink:#1f2937;--muted:#6b7280;--bg:#ffffff;--bg2:#fafafa;--card:#f7f7f8;--ring:#e5e7eb;
+      --shadow:0 1px 2px rgba(16,24,40,.04);
+      --shadow-hover:0 12px 24px -8px rgba(16,24,40,.16), 0 4px 8px -4px rgba(16,24,40,.08);
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --crimson:#ff6b8a;--crimson-soft:rgba(255,107,138,.10);--crimson-soft2:rgba(255,107,138,.18);
+        --ink:#e8eaed;--muted:#9aa1ac;--bg:#111317;--bg2:#0c0e11;--card:#1a1d22;--ring:#2a2e35;
+        --shadow:0 1px 2px rgba(0,0,0,.3);
+        --shadow-hover:0 12px 24px -8px rgba(0,0,0,.6), 0 4px 8px -4px rgba(0,0,0,.4);
+      }
     }
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
     a{color:var(--crimson);text-decoration:none}
     a:hover{text-decoration:underline}
-    .container{max-width:1080px;margin:0 auto;padding:24px}
-    header{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;padding:24px 0;border-bottom:1px solid var(--ring)}
-    .brand{display:flex;gap:16px;align-items:center}
-    .avatar{width:84px;height:84px;border-radius:50%;background:var(--card);display:grid;place-items:center;font-weight:800;color:var(--crimson);border:2px solid var(--ring);overflow:hidden}
+    .container{max-width:1080px;margin:0 auto;padding:0 24px}
+    header{padding:36px 0 28px}
+    .brand{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
+    .brand-main{display:flex;gap:20px;align-items:center}
+    .avatar{width:104px;height:104px;border-radius:20px;background:var(--card);display:grid;place-items:center;font-weight:800;color:var(--crimson);border:1px solid var(--ring);overflow:hidden;box-shadow:var(--shadow);flex:none}
     .avatar img{width:100%;height:100%;object-fit:cover}
-    nav a{margin-left:16px;font-weight:600}
-    .hero{display:grid;grid-template-columns:1.1fr 0.9fr;gap:24px;align-items:center;padding:32px 0}
-    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(122,0,25,.08);color:var(--crimson);font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase}
-    h1{font-size:40px;line-height:1.1;margin:12px 0}
-    p.lead{font-size:18px;color:var(--muted);margin:0}
-    .kgrid{display:grid;gap:16px}
-    .card{background:var(--card);border:1px solid var(--ring);border-radius:16px;padding:18px}
-    h2{font-size:24px;margin:8px 0 12px}
-    h3{font-size:18px;margin:10px 0}
-    ul{margin:8px 0 0 18px}
-    .publist li{margin-bottom:10px}
-    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    footer{margin:40px 0 20px;color:var(--muted);font-size:14px}
-    .btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid var(--ring);background:#fff;font-weight:600}
-    .btn.primary{background:var(--crimson);color:#fff;border-color:var(--crimson)}
+    h1{font-size:38px;line-height:1.15;margin:10px 0 6px;letter-spacing:-.01em}
+    p.lead{font-size:16px;color:var(--muted);margin:0;line-height:1.5}
+    .badge{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--crimson-soft);color:var(--crimson);font-weight:700;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase}
     .meta{color:var(--muted);font-size:14px}
-    .tabs{display:flex;gap:8px;align-items:center}
-    .tab{padding:6px 10px;border:1px solid var(--ring);border-radius:999px;font-weight:700;cursor:pointer;background:#fff}
-    .tab.active{background:var(--crimson);color:#fff;border-color:var(--crimson)}
+    header .meta{margin-top:8px}
+
+    .langtabs{display:flex;gap:6px;align-items:center;background:var(--card);padding:4px;border-radius:999px;border:1px solid var(--ring)}
+    .tab{padding:7px 14px;border:none;border-radius:999px;font-weight:700;font-size:13px;cursor:pointer;background:transparent;color:var(--muted)}
+    .tab.active{background:var(--crimson);color:#fff}
+
+    /* sticky section nav */
+    nav.sitenav{position:sticky;top:0;z-index:20;display:flex;flex-wrap:wrap;gap:4px;background:var(--bg);border-top:1px solid var(--ring);border-bottom:1px solid var(--ring);padding:10px 0;margin-bottom:8px}
+    nav.sitenav a{padding:6px 12px;border-radius:8px;font-weight:600;font-size:14px;color:var(--ink)}
+    nav.sitenav a:hover{background:var(--card);text-decoration:none;color:var(--crimson)}
+
+    main{transition:opacity .18s ease}
+    main.fading{opacity:0}
     main[hidden]{display:none}
-    @media (max-width: 860px){.hero{grid-template-columns:1fr}.two-col{grid-template-columns:1fr}}
+
+    /* stat row */
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0}
+    .stat{background:var(--card);border:1px solid var(--ring);border-radius:16px;padding:16px;text-align:center}
+    .stat .num{font-size:26px;font-weight:800;color:var(--crimson);line-height:1}
+    .stat .label{font-size:12px;color:var(--muted);margin-top:6px;font-weight:600;letter-spacing:.02em}
+
+    .hero{padding:8px 0 28px}
+    .hero .lead{font-size:18px;color:var(--ink)}
+    .hero .lead strong{color:var(--crimson)}
+
+    .kgrid{display:grid;gap:16px}
+    .card{background:var(--card);border:1px solid var(--ring);border-radius:16px;padding:20px;box-shadow:var(--shadow);transition:box-shadow .18s ease, transform .18s ease}
+    .card:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+    .icon-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+    .icon-badge{width:36px;height:36px;border-radius:10px;background:var(--crimson-soft);display:grid;place-items:center;color:var(--crimson);flex:none}
+    .icon-badge svg{width:19px;height:19px}
+
+    h2{font-size:23px;margin:8px 0 14px;letter-spacing:-.01em}
+    h3{font-size:16px;margin:0 0 8px;font-weight:700}
+    section.kgrid{padding-top:36px;scroll-margin-top:64px}
+    ul{margin:8px 0 0 18px;padding:0}
+    li{margin-bottom:6px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+    /* timeline */
+    .timeline{position:relative;padding-left:22px;margin-top:4px}
+    .timeline::before{content:'';position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:var(--ring)}
+    .timeline-item{position:relative;margin-bottom:16px}
+    .timeline-item:last-child{margin-bottom:0}
+    .timeline-item::before{content:'';position:absolute;left:-22px;top:4px;width:11px;height:11px;border-radius:50%;background:var(--crimson);border:2px solid var(--bg);box-shadow:0 0 0 1px var(--ring)}
+    .timeline-item .dates{display:block;font-weight:700;color:var(--crimson);font-size:12.5px;letter-spacing:.02em;margin-bottom:2px}
+    .timeline-item .role{font-size:14.5px}
+
+    /* publications */
+    .publist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+    .pub-item{display:flex;gap:14px;background:var(--card);border:1px solid var(--ring);border-radius:14px;padding:14px 16px;align-items:flex-start;transition:box-shadow .18s ease, transform .18s ease}
+    .pub-item:hover{box-shadow:var(--shadow-hover);transform:translateY(-1px)}
+    .pub-num{flex:none;width:28px;height:28px;border-radius:8px;background:var(--crimson-soft);color:var(--crimson);font-weight:800;font-size:12px;display:grid;place-items:center;margin-top:1px}
+    .pub-title{font-size:14.5px;line-height:1.5}
+    .pub-meta{margin-top:4px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+    .pub-journal{font-size:11.5px;font-weight:700;color:var(--crimson);background:var(--crimson-soft);padding:2px 9px;border-radius:999px}
+    .pub-year{font-size:12px;color:var(--muted)}
+    .pub-tag{font-size:11px;font-weight:700;color:#8a5a00;background:rgba(180,120,0,.12);padding:2px 8px;border-radius:999px}
+    @media (prefers-color-scheme: dark){ .pub-tag{color:#e0b23d;background:rgba(224,178,61,.16)} }
+
+    footer{margin:48px 0 24px;color:var(--muted);font-size:13px;border-top:1px solid var(--ring);padding-top:20px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:12px;border:1px solid var(--ring);background:var(--bg);font-weight:600;font-size:14px;color:var(--ink)}
+    .btn:hover{text-decoration:none;border-color:var(--crimson);color:var(--crimson)}
+    .btn.primary{background:var(--crimson);color:#fff;border-color:var(--crimson)}
+    .btn.primary:hover{opacity:.92;color:#fff}
+
+    @media (max-width: 860px){
+      .two-col{grid-template-columns:1fr}
+      .stats{grid-template-columns:repeat(2,1fr)}
+      h1{font-size:30px}
+      nav.sitenav{overflow-x:auto;flex-wrap:nowrap}
+    }
   </style>
   <script type="application/ld+json">
   {
@@ -70,23 +141,25 @@
   <div class="container">
     <header>
       <div class="brand">
-        <div class="avatar"><img src="assets/profile.jpg" alt="Portrait of Prof. Sanghee Kang"/></div>
-        <div>
-          <div class="badge">Colorectal Surgery · Surgical Oncology · Medical AI</div>
-          <h1>Prof. Sanghee Kang, M.D., Ph.D.</h1>
-          <p class="lead">Assistant Dean for International Affairs, Korea University College of Medicine<br/>Department of Surgery (Division of Colon & Rectal Surgery), Korea University Guro Hospital</p>
-          <p class="meta">Seoul, Republic of Korea · <a href="mailto:kasaha1@korea.ac.kr">kasaha1@korea.ac.kr</a> · <a href="https://orcid.org/0000-0002-6097-8831">ORCID</a> · <a href="https://scholarworks.korea.ac.kr/kumedicine/researcher-profile?ep=150">ScholarWorks</a></p>
+        <div class="brand-main">
+          <div class="avatar"><img src="assets/profile.jpg" alt="Portrait of Prof. Sanghee Kang"/></div>
+          <div>
+            <div class="badge">Colorectal Surgery · Surgical Oncology · Medical AI</div>
+            <h1>Prof. Sanghee Kang, M.D., Ph.D.</h1>
+            <p class="lead">Assistant Dean for International Affairs, Korea University College of Medicine<br/>Department of Surgery (Division of Colon &amp; Rectal Surgery), Korea University Guro Hospital</p>
+            <p class="meta">Seoul, Republic of Korea · <a href="mailto:kasaha1@korea.ac.kr">kasaha1@korea.ac.kr</a> · <a href="https://orcid.org/0000-0002-6097-8831">ORCID</a> · <a href="https://scholarworks.korea.ac.kr/kumedicine/researcher-profile?ep=150">ScholarWorks</a></p>
+          </div>
         </div>
-      </div>
-      <div class="tabs">
-        <button class="tab" data-lang="en">EN</button>
-        <button class="tab" data-lang="ko">KO</button>
+        <div class="langtabs">
+          <button class="tab" data-lang="en">EN</button>
+          <button class="tab" data-lang="ko">KO</button>
+        </div>
       </div>
     </header>
 
     <!-- English -->
     <main id="lang-en">
-      <nav style="margin-top:8px">
+      <nav class="sitenav">
         <a href="#about-en">About</a>
         <a href="#research-en">Research</a>
         <a href="#publications-en">Publications</a>
@@ -96,27 +169,16 @@
       </nav>
 
       <section class="hero">
-        <div>
-          <p class="lead">I am a colorectal surgeon and professor at Korea University Guro Hospital. My current interests include <strong>cancer genomics</strong>, <strong>clinical AI</strong>, and <strong>organoids & microphysiological systems (MPS)</strong>.</p>
-          <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap">
-            <a class="btn primary" href="#publications-en">See publications</a>
-            <a class="btn" href="cv/Sanghee_Kang_CV_EN.pdf">Download CV (PDF)</a>
-          </div>
+        <p class="lead">I am a colorectal surgeon and professor at Korea University Guro Hospital. My current interests include <strong>cancer genomics</strong>, <strong>clinical AI</strong>, and <strong>organoids &amp; microphysiological systems (MPS)</strong>.</p>
+        <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn primary" href="#publications-en">See publications</a>
+          <a class="btn" href="cv/Sanghee_Kang_CV_EN.pdf">Download CV (PDF)</a>
         </div>
-        <div class="kgrid">
-          <div class="card">
-            <h3>Affiliation</h3>
-            <div>Korea University Guro Hospital</div>
-            <div class="meta">Professor (2023–present)</div>
-          </div>
-          <div class="card">
-            <h3>Interests</h3>
-            <div class="meta">Cancer genomics · Clinical AI · Organoids · MPS · Robotic surgery</div>
-          </div>
-          <div class="card">
-            <h3>For collaborators</h3>
-            <div class="meta">Open to multicenter studies, surgical trials, and translational oncology projects.</div>
-          </div>
+        <div class="stats">
+          <div class="stat"><div class="num">40+</div><div class="label">Peer-reviewed papers</div></div>
+          <div class="stat"><div class="num">20+</div><div class="label">Years in surgery &amp; research</div></div>
+          <div class="stat"><div class="num">3</div><div class="label">Active research grants</div></div>
+          <div class="stat"><div class="num">6</div><div class="label">Society leadership roles</div></div>
         </div>
       </section>
 
@@ -126,19 +188,21 @@
         <div class="two-col">
           <div class="card">
             <h3>Education</h3>
-            <ul>
-              <li>Ph.D. in Medical Science, Korea University Graduate School (2015)</li>
-              <li>Master of Medical Science, Korea University Graduate School (2008)</li>
-              <li>M.D., Korea University College of Medicine (2004)</li>
-            </ul>
+            <div class="timeline">
+              <div class="timeline-item"><span class="dates">2009 – 2015</span><span class="role">Ph.D. in Medical Science, Korea University Graduate School</span></div>
+              <div class="timeline-item"><span class="dates">2005 – 2008</span><span class="role">Master of Medical Science, Korea University Graduate School</span></div>
+              <div class="timeline-item"><span class="dates">1998 – 2004</span><span class="role">M.D., Korea University College of Medicine</span></div>
+            </div>
           </div>
           <div class="card">
-            <h3>Recent Appointments</h3>
-            <ul>
-              <li>Professor, Dept. of Colorectal Surgery, Korea University Guro Hospital (2023–)</li>
-              <li>Associate Professor (2019–2023)</li>
-              <li>Visiting Assistant Professor, MD Anderson Cancer Center (2016–2017)</li>
-            </ul>
+            <h3>Appointments</h3>
+            <div class="timeline">
+              <div class="timeline-item"><span class="dates">2023 – Present</span><span class="role">Professor, Korea University Guro Hospital</span></div>
+              <div class="timeline-item"><span class="dates">2019 – 2023</span><span class="role">Associate Professor, Korea University Guro Hospital</span></div>
+              <div class="timeline-item"><span class="dates">2016 – 2017</span><span class="role">Visiting Assistant Professor, MD Anderson Cancer Center</span></div>
+              <div class="timeline-item"><span class="dates">2014 – 2019</span><span class="role">Clinical Assistant Professor, Korea University Guro Hospital</span></div>
+              <div class="timeline-item"><span class="dates">2012 – 2014</span><span class="role">Clinical Instructor, Korea University Guro Hospital</span></div>
+            </div>
           </div>
         </div>
       </section>
@@ -147,16 +211,22 @@
         <h2>Research</h2>
         <div class="two-col">
           <div class="card">
-            <h3>Current themes</h3>
+            <div class="icon-row">
+              <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v5.5L4.5 18a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L14 8.5V3"/><path d="M7 14h10"/></svg></div>
+              <h3 style="margin:0">Current themes</h3>
+            </div>
             <ul>
-              <li>Early-onset & treatment-response genomics in colorectal cancer</li>
+              <li>Early-onset &amp; treatment-response genomics in colorectal cancer</li>
               <li>Predictive modeling and clinical decision support (NLP/ML)</li>
-              <li>Organoid & MPS platforms for drug testing and irAE modeling</li>
-              <li>Minimally invasive & robotic techniques; intracorporeal anastomosis</li>
+              <li>Organoid &amp; MPS platforms for drug testing and irAE modeling</li>
+              <li>Minimally invasive &amp; robotic techniques; intracorporeal anastomosis</li>
             </ul>
           </div>
           <div class="card">
-            <h3>Collaboration</h3>
+            <div class="icon-row">
+              <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+              <h3 style="margin:0">Collaboration</h3>
+            </div>
             <p class="meta">Email with a short proposal to discuss data standards and analysis plans. International collaborations welcome.</p>
           </div>
         </div>
@@ -165,19 +235,23 @@
       <section id="publications-en" class="kgrid">
         <h2>Recent Publications</h2>
         <ul class="publist">
-          <li>Yim SY, Kim H, Kim TH, <strong>Kang SH</strong>, Lee Y, Choi E, et al. Identifying Sorafenib Benefit among Hepatocellular Carcinoma Patients: A Transcriptomic and Genomic Approach. <em>JHEP Reports</em>. 2026;101742.</li>
-          <li>Bong JW, Lee H, Jeong S, <strong>Kang S</strong> (corresponding). Older Age Threshold for Oxaliplatin Benefit in Stage II–III Colorectal Cancer. <em>JAMA Network Open</em>. 2025;8(8):e2525660.</li>
-          <li>Kim KE, Bae SU, Lee SH, Lim DR, Ha HK, Kim J, et al. The Articulated Laparoscopic Total Mesorectal Excision for Rectal Cancer (ATOME trial). <em>Trials</em>. 2025;26(1):260.</li>
-          <li>Cho N, Jeong I, Ahn S, Gil H, Kim Y, Park J, <strong>Kang S</strong>, Lee H. Machine Learning to Assist in Managing Acute Kidney Injury. <em>J Med Internet Res</em>. 2025;27:e66568.</li>
-          <li>Ju Y, Kim BG, Gim JA, Bong JW, Cheong CO, Oh SC, et al. Synergistic Anticancer Effects of FGFR Inhibitor and Cannabidiol in Colorectal Cancer. <em>Nutrients</em>. 2025;17(16):2609.</li>
-          <li>Cheong C, Doo HM, Ju Y, Bong JW, <strong>Kang SH</strong>, Lee SI, et al. Polyglycolic Acid-Cyanoacrylate Complex for Prevention of Major Intestinal Anastomotic Leakage. <em>ASTR</em>. 2025;109(5):335–343.</li>
+          <li class="pub-item"><span class="pub-num">01</span><div><div class="pub-title">Yim SY, Kim H, Kim TH, <strong>Kang SH</strong>, Lee Y, Choi E, et al. Identifying Sorafenib Benefit among Hepatocellular Carcinoma Patients: A Transcriptomic and Genomic Approach.</div><div class="pub-meta"><span class="pub-journal">JHEP Reports</span><span class="pub-year">2026</span></div></div></li>
+          <li class="pub-item"><span class="pub-num">02</span><div><div class="pub-title">Bong JW, Lee H, Jeong S, <strong>Kang S</strong>. Older Age Threshold for Oxaliplatin Benefit in Stage II–III Colorectal Cancer.</div><div class="pub-meta"><span class="pub-journal">JAMA Network Open</span><span class="pub-year">2025;8(8):e2525660</span><span class="pub-tag">Corresponding †</span></div></div></li>
+          <li class="pub-item"><span class="pub-num">03</span><div><div class="pub-title">Kim KE, Bae SU, Lee SH, Lim DR, Ha HK, Kim J, et al. The Articulated Laparoscopic Total Mesorectal Excision for Rectal Cancer (ATOME trial).</div><div class="pub-meta"><span class="pub-journal">Trials</span><span class="pub-year">2025;26(1):260</span></div></div></li>
+          <li class="pub-item"><span class="pub-num">04</span><div><div class="pub-title">Cho N, Jeong I, Ahn S, Gil H, Kim Y, Park J, <strong>Kang S</strong>, Lee H. Machine Learning to Assist in Managing Acute Kidney Injury in General Wards.</div><div class="pub-meta"><span class="pub-journal">J Med Internet Res</span><span class="pub-year">2025;27:e66568</span></div></div></li>
+          <li class="pub-item"><span class="pub-num">05</span><div><div class="pub-title">Ju Y, Kim BG, Gim JA, Bong JW, Cheong CO, Oh SC, et al. Synergistic Anticancer Effects of Fibroblast Growth Factor Receptor Inhibitor and Cannabidiol in Colorectal Cancer.</div><div class="pub-meta"><span class="pub-journal">Nutrients</span><span class="pub-year">2025;17(16):2609</span></div></div></li>
+          <li class="pub-item"><span class="pub-num">06</span><div><div class="pub-title">Cheong C, Doo HM, Ju Y, Bong JW, <strong>Kang SH</strong>, Lee SI, et al. Polyglycolic Acid-Cyanoacrylate Complex for Prevention of Major Intestinal Anastomotic Leakage.</div><div class="pub-meta"><span class="pub-journal">Ann Surg Treat Res</span><span class="pub-year">2025;109(5):335–343</span></div></div></li>
         </ul>
-        <p class="meta">Full list in CV.</p>
+        <p class="meta">Full list of 40+ publications in CV.</p>
       </section>
 
       <section id="grants-en" class="kgrid">
         <h2>Research Grants</h2>
         <div class="card">
+          <div class="icon-row">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3 style="margin:0">Active grants</h3>
+          </div>
           <ul>
             <li><strong>Korean ARPA-H Project</strong> — KHIDI, Ministry of Health and Welfare (Seoul, KR). Development of a Microphysiological System for Safety Assessment of Immunotherapeutics. Subproject PI. <span class="meta">2024-11 – 2029-02</span></li>
             <li><strong>Safety Evaluation Research Program</strong> — Ministry of Food and Drug Safety (MFDS). Development of Predictive Evaluation Technology for the Immunotoxicity of Antibody Therapeutics. Subproject PI. <span class="meta">2026-03 – 2028-02</span></li>
@@ -190,6 +264,10 @@
         <h2>Professional Service</h2>
         <div class="two-col">
           <div class="card">
+            <div class="icon-row">
+              <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+              <h3 style="margin:0">Memberships &amp; roles</h3>
+            </div>
             <ul>
               <li>General Secretary, Korean Hernia Society</li>
               <li>Director of Information, Korean Association of Robotic Surgeons</li>
@@ -200,7 +278,10 @@
             </ul>
           </div>
           <div class="card">
-            <h3>Students & fellows</h3>
+            <div class="icon-row">
+              <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg></div>
+              <h3 style="margin:0">Students &amp; fellows</h3>
+            </div>
             <p class="meta">Contact with CV and statement of interest.</p>
           </div>
         </div>
@@ -218,7 +299,7 @@
 
     <!-- Korean -->
     <main id="lang-ko" hidden>
-      <nav style="margin-top:8px">
+      <nav class="sitenav">
         <a href="#about-ko">소개</a>
         <a href="#research-ko">연구</a>
         <a href="#publications-ko">논문</a>
@@ -228,27 +309,16 @@
       </nav>
 
       <section class="hero">
-        <div>
-          <p class="lead">고려대학교 구로병원 대장항문외과 교수입니다. 현재 관심 분야는 <strong>암 유전체 연구</strong>, <strong>임상 AI 연구</strong>, <strong>오가노이드 및 MPS</strong> 입니다.</p>
-          <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap">
-            <a class="btn primary" href="#publications-ko">최근 논문 보기</a>
-            <a class="btn" href="cv/Sanghee_Kang_CV_KO.pdf">이력서(PDF)</a>
-          </div>
+        <p class="lead">고려대학교 구로병원 대장항문외과 교수입니다. 현재 관심 분야는 <strong>암 유전체 연구</strong>, <strong>임상 AI 연구</strong>, <strong>오가노이드 및 MPS</strong> 입니다.</p>
+        <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn primary" href="#publications-ko">최근 논문 보기</a>
+          <a class="btn" href="cv/Sanghee_Kang_CV_KO.pdf">이력서(PDF)</a>
         </div>
-        <div class="kgrid">
-          <div class="card">
-            <h3>소속</h3>
-            <div>고려대학교 구로병원</div>
-            <div class="meta">교수 (2023–현재)</div>
-          </div>
-          <div class="card">
-            <h3>관심 분야</h3>
-            <div class="meta">암 유전체 · 임상 AI · 오가노이드 · MPS · 로봇수술</div>
-          </div>
-          <div class="card">
-            <h3>공동연구 안내</h3>
-            <div class="meta">다기관 연구, 수술 임상시험, 중개연구 프로젝트 제안 환영합니다.</div>
-          </div>
+        <div class="stats">
+          <div class="stat"><div class="num">40+</div><div class="label">발표 논문</div></div>
+          <div class="stat"><div class="num">20+</div><div class="label">수술·연구 경력(년)</div></div>
+          <div class="stat"><div class="num">3</div><div class="label">진행 중인 연구과제</div></div>
+          <div class="stat"><div class="num">6</div><div class="label">학회 임원 활동</div></div>
         </div>
       </section>
 
@@ -258,19 +328,21 @@
         <div class="two-col">
           <div class="card">
             <h3>학력</h3>
-            <ul>
-              <li>의학박사(Ph.D.), 고려대학교 대학원 (2015)</li>
-              <li>의학석사, 고려대학교 대학원 (2008)</li>
-              <li>의학사(M.D.), 고려대학교 의과대학 (2004)</li>
-            </ul>
+            <div class="timeline">
+              <div class="timeline-item"><span class="dates">2009 – 2015</span><span class="role">의학박사(Ph.D.), 고려대학교 대학원</span></div>
+              <div class="timeline-item"><span class="dates">2005 – 2008</span><span class="role">의학석사, 고려대학교 대학원</span></div>
+              <div class="timeline-item"><span class="dates">1998 – 2004</span><span class="role">의학사(M.D.), 고려대학교 의과대학</span></div>
+            </div>
           </div>
           <div class="card">
             <h3>주요 경력</h3>
-            <ul>
-              <li>교수, 고려대학교 구로병원 대장항문외과 (2023–)</li>
-              <li>부교수 (2019–2023)</li>
-              <li>방문조교수, MD Anderson Cancer Center (2016–2017)</li>
-            </ul>
+            <div class="timeline">
+              <div class="timeline-item"><span class="dates">2023 – 현재</span><span class="role">교수, 고려대학교 구로병원 대장항문외과</span></div>
+              <div class="timeline-item"><span class="dates">2019 – 2023</span><span class="role">부교수, 고려대학교 구로병원</span></div>
+              <div class="timeline-item"><span class="dates">2016 – 2017</span><span class="role">방문조교수, MD Anderson Cancer Center</span></div>
+              <div class="timeline-item"><span class="dates">2014 – 2019</span><span class="role">임상조교수, 고려대학교 구로병원</span></div>
+              <div class="timeline-item"><span class="dates">2012 – 2014</span><span class="role">임상강사, 고려대학교 구로병원</span></div>
+            </div>
           </div>
         </div>
       </section>
@@ -279,7 +351,10 @@
         <h2>연구</h2>
         <div class="two-col">
           <div class="card">
-            <h3>현재 주제</h3>
+            <div class="icon-row">
+              <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v5.5L4.5 18a2 2 0 0 0 1.7 3h11.6a2 2 0 0 0 1.7-3L14 8.5V3"/><path d="M7 14h10"/></svg></div>
+              <h3 style="margin:0">현재 주제</h3>
+            </div>
             <ul>
               <li>대장암의 조기발병/치료반응 유전체 연구</li>
               <li>임상 예측모델 및 의사결정지원(NLP/ML)</li>
@@ -288,7 +363,10 @@
             </ul>
           </div>
           <div class="card">
-            <h3>협력</h3>
+            <div class="icon-row">
+              <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+              <h3 style="margin:0">협력</h3>
+            </div>
             <p class="meta">데이터 표준과 분석계획을 포함한 간단한 제안서를 이메일로 보내 주세요. 국제 공동연구 환영합니다.</p>
           </div>
         </div>
@@ -297,19 +375,23 @@
       <section id="publications-ko" class="kgrid">
         <h2>최근 논문</h2>
         <ul class="publist">
-          <li>Yim SY 등, <strong>Kang SH</strong> 공저. 소라페닙 반응 예측을 위한 간세포암 전사체·유전체 분석. <em>JHEP Reports</em>. 2026.</li>
-          <li>Bong JW, Lee H, Jeong S, <strong>Kang S</strong> (교신). 옥살리플라틴 이득의 연령 경계. <em>JAMA Netw Open</em>. 2025;8(8).</li>
-          <li>Kim KE 등, <strong>Kang SH</strong> 공저. 직장암 관절형 복강경 전직장간막절제술(ATOME trial). <em>Trials</em>. 2025.</li>
-          <li>Cho N 등, <strong>Kang S</strong> 공저. 일반병동 AKI 관리 보조 ML. <em>J Med Internet Res</em>. 2025.</li>
-          <li>Ju Y 등, <strong>Kang S</strong> 공저. FGFR 억제제와 카나비디올의 대장암 항암 상승효과. <em>Nutrients</em>. 2025.</li>
-          <li>Cheong C 등, <strong>Kang SH</strong> 공저. 문합부 누출 방지를 위한 PGA-cyanoacrylate 복합체. <em>ASTR</em>. 2025.</li>
+          <li class="pub-item"><span class="pub-num">01</span><div><div class="pub-title">Yim SY 등, <strong>Kang SH</strong> 공저. 소라페닙 반응 예측을 위한 간세포암 전사체·유전체 분석.</div><div class="pub-meta"><span class="pub-journal">JHEP Reports</span><span class="pub-year">2026</span></div></div></li>
+          <li class="pub-item"><span class="pub-num">02</span><div><div class="pub-title">Bong JW, Lee H, Jeong S, <strong>Kang S</strong>. 옥살리플라틴 이득의 연령 경계.</div><div class="pub-meta"><span class="pub-journal">JAMA Netw Open</span><span class="pub-year">2025;8(8)</span><span class="pub-tag">교신저자 †</span></div></div></li>
+          <li class="pub-item"><span class="pub-num">03</span><div><div class="pub-title">Kim KE 등, <strong>Kang SH</strong> 공저. 직장암 관절형 복강경 전직장간막절제술(ATOME trial).</div><div class="pub-meta"><span class="pub-journal">Trials</span><span class="pub-year">2025</span></div></div></li>
+          <li class="pub-item"><span class="pub-num">04</span><div><div class="pub-title">Cho N 등, <strong>Kang S</strong> 공저. 일반병동 AKI 관리 보조 ML.</div><div class="pub-meta"><span class="pub-journal">J Med Internet Res</span><span class="pub-year">2025</span></div></div></li>
+          <li class="pub-item"><span class="pub-num">05</span><div><div class="pub-title">Ju Y 등, <strong>Kang S</strong> 공저. FGFR 억제제와 카나비디올의 대장암 항암 상승효과.</div><div class="pub-meta"><span class="pub-journal">Nutrients</span><span class="pub-year">2025</span></div></div></li>
+          <li class="pub-item"><span class="pub-num">06</span><div><div class="pub-title">Cheong C 등, <strong>Kang SH</strong> 공저. 문합부 누출 방지를 위한 PGA-cyanoacrylate 복합체.</div><div class="pub-meta"><span class="pub-journal">ASTR</span><span class="pub-year">2025</span></div></div></li>
         </ul>
-        <p class="meta">전체 목록은 이력서를 참고하세요.</p>
+        <p class="meta">전체 40편 이상의 논문 목록은 이력서를 참고하세요.</p>
       </section>
 
       <section id="grants-ko" class="kgrid">
         <h2>연구비</h2>
         <div class="card">
+          <div class="icon-row">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3 style="margin:0">수행 중인 연구과제</h3>
+          </div>
           <ul>
             <li><strong>한국형 ARPA-H 프로젝트</strong> — 보산진(보건복지부). 면역치료제 안전성 평가를 위한 미세생리시스템 개발. 연구책임자(세부). <span class="meta">2024.11 – 2029.02</span></li>
             <li><strong>식품의약품 등 안전성평가 연구</strong> — 식약처. 항체의약품 면역독성 예측평가 기술 개발. 연구책임자(세부). <span class="meta">2026.03 – 2028.02</span></li>
@@ -322,6 +404,10 @@
         <h2>학회활동</h2>
         <div class="two-col">
           <div class="card">
+            <div class="icon-row">
+              <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+              <h3 style="margin:0">소속·역할</h3>
+            </div>
             <ul>
               <li>대한탈장학회 총무이사</li>
               <li>한국외과로봇수술학회 정보이사</li>
@@ -332,7 +418,10 @@
             </ul>
           </div>
           <div class="card">
-            <h3>학생·펠로우</h3>
+            <div class="icon-row">
+              <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg></div>
+              <h3 style="margin:0">학생·펠로우</h3>
+            </div>
             <p class="meta">관심 있는 분은 이력서와 관심 주제를 이메일로 보내 주세요.</p>
           </div>
         </div>
@@ -356,15 +445,29 @@
   <script>
     const tabs = document.querySelectorAll('.tab');
     const mains = { en: document.getElementById('lang-en'), ko: document.getElementById('lang-ko') };
-    function setLang(lang){
+    function setLang(lang, animate){
       for(const t of tabs){ t.classList.toggle('active', t.dataset.lang===lang); }
-      mains.en.hidden = lang!== 'en';
-      mains.ko.hidden = lang!== 'ko';
-      localStorage.setItem('lang', lang);
+      const showEl = mains[lang];
+      const hideEl = lang === 'en' ? mains.ko : mains.en;
+      if(!animate){
+        mains.en.hidden = lang !== 'en';
+        mains.ko.hidden = lang !== 'ko';
+        localStorage.setItem('lang', lang);
+        return;
+      }
+      hideEl.classList.add('fading');
+      setTimeout(()=>{
+        mains.en.hidden = lang !== 'en';
+        mains.ko.hidden = lang !== 'ko';
+        showEl.classList.add('fading');
+        requestAnimationFrame(()=> requestAnimationFrame(()=> showEl.classList.remove('fading')));
+        hideEl.classList.remove('fading');
+        localStorage.setItem('lang', lang);
+      }, 160);
     }
     const saved = localStorage.getItem('lang') || 'en';
-    setLang(saved);
-    tabs.forEach(t=>t.addEventListener('click',()=>setLang(t.dataset.lang)));
+    setLang(saved, false);
+    tabs.forEach(t=>t.addEventListener('click',()=>setLang(t.dataset.lang, true)));
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
